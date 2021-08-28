@@ -619,16 +619,17 @@ basic.forever(function () {
                 basic.pause(200)
                 TobbieII.stopturn()
                 TobbieII.forward()
-            }
-            if (TobbieII.LBlock(100)) {
-                TobbieII.stopwalk()
-                TobbieII.leftward()
-                while (TobbieII.LBlock(60)) {
-                	
+            } else if (TobbieII.LBlock(100)) {
+                if (true) {
+                    TobbieII.stopwalk()
+                    TobbieII.leftward()
+                    while (TobbieII.LBlock(60)) {
+                    	
+                    }
+                    basic.pause(200)
+                    TobbieII.stopturn()
+                    TobbieII.forward()
                 }
-                basic.pause(200)
-                TobbieII.stopturn()
-                TobbieII.forward()
             }
         }
     }
