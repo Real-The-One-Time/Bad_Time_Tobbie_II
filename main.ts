@@ -272,7 +272,7 @@ basic.showLeds(`
     . . . . .
     `)
 music.setTempo(120)
-while (TobbieII.Read_LBlock() + TobbieII.Read_RBlock() < 50) {
+while (TobbieII.Read_LBlock() + TobbieII.Read_RBlock() < 50 && !(input.buttonIsPressed(Button.A))) {
 	
 }
 led.setBrightness(255)
@@ -604,12 +604,12 @@ basic.forever(function () {
     song_part_2()
 })
 basic.forever(function () {
-    if (button_a == dum_value) {
+    if (button_a == 1) {
         TobbieII.stopwalk()
         TobbieII.stopturn()
     } else {
         TobbieII.forward()
-        while (!(button_a == dum_value)) {
+        while (!(button_a == 1)) {
             if (TobbieII.RBlock(100)) {
                 TobbieII.stopwalk()
                 TobbieII.rightward()
